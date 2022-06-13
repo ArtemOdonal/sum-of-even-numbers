@@ -7,11 +7,36 @@ public class SumOfEvenNumbers {
 
         System.out.println(sum(array));
     }
+    public static int sum(int[] array) {
 
-    public static int sum(int[] array){
+        int result = 0;
+       try {
+           if (array.length == 0) {
+               //throw new UnsupportedOperationException();
+               return 0;
+           }
+       }catch (NullPointerException e){
+           return 0;
+       }
 
-        //put your code here
 
-        throw new UnsupportedOperationException();
+
+        for (int i = 0; i < array.length; i++) {
+           int pro = array[i];
+            if(pro % 2 == 0 ){
+                result += array[i];
+            }
+
+        }
+
+
+
+
+            return result;
+
+
+
+
+        //throw new UnsupportedOperationException();
     }
 }
